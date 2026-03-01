@@ -2,6 +2,7 @@
   "name": "beakcrypt",
   "version": "0.0.1",
   "description": "Secure environment variable management with E2E encryption",
+  "homepage": "https://beakcrypt.com",
   "type": "module",
   "bin": {
     "beakcrypt": "./dist/index.js"
@@ -9,8 +10,20 @@
   "exports": {
     ".": "./dist/index.js"
   },
+  "keywords": [
+    "env",
+    "secrets",
+    "encryption",
+    "environment-variables",
+    "secret-management",
+    "e2e-encryption",
+    "dotenv",
+    "cli",
+    "devtools"
+  ],
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "engines": {
     "node": ">=20"

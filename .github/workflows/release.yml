@@ -42,7 +42,7 @@ jobs:
       - name: Create Release PR or Publish
         uses: changesets/action@v1
         with:
-          publish: pnpm publish --filter=beakcrypt --no-git-checks
+          publish: pnpm changeset publish
           title: "chore: release beakcrypt"
           commit: "chore: release beakcrypt"
         env:
