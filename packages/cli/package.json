@@ -29,7 +29,13 @@
     "node": ">=20"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "directory": "packages/cli",
+    "url": "https://github.com/prudentbird/beakcrypt.git"
   },
   "private": false,
   "scripts": {
