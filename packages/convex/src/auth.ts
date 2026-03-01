@@ -6,14 +6,22 @@ import { components, internal } from "./_generated/api";
 import { convex } from "@convex-dev/better-auth/plugins";
 import { requireActionCtx } from "@convex-dev/better-auth/utils";
 import { createClient, type GenericCtx } from "@convex-dev/better-auth";
-
-const siteUrl = process.env.SITE_URL!;
+import { dash } from "@better-auth/infra";
 
 export const authComponent = createClient<DataModel>(components.betterAuth);
 
 export const createAuth = (ctx: GenericCtx<DataModel>) => {
   return betterAuth({
-    baseURL: siteUrl,
+    baseURL: {
+      allowedHosts: [
+        "beakcrypt.com",
+        "*.beakcrypt.com",
+        "*.vercel.app",
+        "localhost:*",
+      ],
+      fallback: process.env.SITE_URL!,
+      protocol: "auto",
+    },
     database: authComponent.adapter(ctx),
     socialProviders: {
       github: {
@@ -22,7 +30,7 @@ export const createAuth = (ctx: GenericCtx<DataModel>) => {
         clientSecret: process.env.GITHUB_CLIENT_SECRET!,
       },
     },
-    plugins: [convex({ authConfig })],
+    plugins: [convex({ authConfig }), dash()],
     databaseHooks: {
       user: {
         create: {
