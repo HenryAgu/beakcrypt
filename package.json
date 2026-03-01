@@ -13,11 +13,14 @@
     "build:app": "turbo run build --filter=@beakcrypt/web",
     "build:docs": "turbo run build --filter=@beakcrypt/docs",
     "dev:cli": "turbo dev --filter=beakcrypt --filter=@beakcrypt/convex",
-    "dev:app": "turbo dev --filter=@beakcrypt/web --filter=@beakcrypt/convex"
+    "dev:app": "turbo dev --filter=@beakcrypt/web --filter=@beakcrypt/convex",
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "devDependencies": {
     "@beakcrypt/eslint-config": "workspace:*",
     "@beakcrypt/typescript-config": "workspace:*",
+    "@changesets/cli": "^2.29.8",
     "@typescript/native-preview": "7.0.0-dev.20260228.1",
     "prettier": "^3.8.1",
     "turbo": "^2.8.12"
