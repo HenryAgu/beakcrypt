@@ -1,5 +1,0 @@
----
-"beakcrypt": patch
----
-
-update deps
