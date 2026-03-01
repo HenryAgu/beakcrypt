@@ -117,9 +117,13 @@ export function getDefaultUrls(): {
   convexSiteUrl: string;
 } {
   return {
-    siteUrl: process.env.BEAKCRYPT_SITE_URL ?? "https://app.beakcrypt.com",
-    convexUrl: process.env.BEAKCRYPT_CONVEX_URL ?? "",
-    convexSiteUrl: process.env.BEAKCRYPT_CONVEX_SITE_URL ?? "",
+    siteUrl: process.env.BEAKCRYPT_SITE_URL ?? "https://beakcrypt.com",
+    convexUrl:
+      process.env.BEAKCRYPT_CONVEX_URL ??
+      "https://wandering-stingray-407.convex.cloud",
+    convexSiteUrl:
+      process.env.BEAKCRYPT_CONVEX_SITE_URL ??
+      "https://wandering-stingray-407.convex.site",
   };
 }
 
