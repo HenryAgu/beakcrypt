@@ -7,13 +7,6 @@
   "access": "public",
   "baseBranch": "dev",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "@beakcrypt/convex",
-    "@beakcrypt/crypto",
-    "@beakcrypt/shared",
-    "@beakcrypt/transactional",
-    "@beakcrypt/ui",
-    "@beakcrypt/eslint-config",
-    "@beakcrypt/typescript-config"
-  ]
+  "privatePackages": { "version": false, "tag": false },
+  "ignore": []
 }
