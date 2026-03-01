@@ -40,9 +40,6 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@beakcrypt/convex": "workspace:*",
-    "@beakcrypt/crypto": "workspace:*",
-    "@beakcrypt/shared": "workspace:*",
     "commander": "^13.1.0",
     "convex": "^1.32.0",
     "dotenv": "^16.5.0",
@@ -52,6 +49,9 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
+    "@beakcrypt/convex": "workspace:*",
+    "@beakcrypt/crypto": "workspace:*",
+    "@beakcrypt/shared": "workspace:*",
     "@beakcrypt/eslint-config": "workspace:*",
     "@beakcrypt/typescript-config": "workspace:*",
     "@types/node": "^25.3.2",

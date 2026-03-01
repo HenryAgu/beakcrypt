@@ -11,7 +11,7 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   dts: false,
-  noExternal: ["@beakcrypt/shared", "@beakcrypt/crypto"],
+  noExternal: ["@beakcrypt/convex", "@beakcrypt/shared", "@beakcrypt/crypto"],
   banner: {
     js: "#!/usr/bin/env node",
   },
