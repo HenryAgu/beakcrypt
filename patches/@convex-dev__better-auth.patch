@@ -1,0 +1,25 @@
+diff --git a/dist/plugins/convex/index.js b/dist/plugins/convex/index.js
+index 204ffeec3e07fbdb8af07f0a34c0b60893d357fb..ca96f806aadecc737dc1af8908a4de55f34964a7 100644
+--- a/dist/plugins/convex/index.js
++++ b/dist/plugins/convex/index.js
+@@ -1,5 +1,6 @@
+ import { createAuthMiddleware, sessionMiddleware } from "better-auth/api";
+-import { createAuthEndpoint, jwt as jwtPlugin, bearer as bearerPlugin, oidcProvider as oidcProviderPlugin, } from "better-auth/plugins";
++import { createAuthEndpoint } from "better-auth/api";
++import { jwt as jwtPlugin, bearer as bearerPlugin, oidcProvider as oidcProviderPlugin, } from "better-auth/plugins";
+ import { omit } from "convex-helpers";
+ export const JWT_COOKIE_NAME = "convex_jwt";
+ const getJwksAlg = (authProvider) => {
+diff --git a/dist/utils/index.d.ts b/dist/utils/index.d.ts
+index c9dd3dded66dd1a915c01bf98cc52e03aedc6850..75469dcf392b1324e8ee5d5cbea50d5d1533a933 100644
+--- a/dist/utils/index.d.ts
++++ b/dist/utils/index.d.ts
+@@ -2,7 +2,7 @@ import type { Auth } from "better-auth";
+ import type { betterAuth } from "better-auth/minimal";
+ import type { AuthProvider, DefaultFunctionArgs, FunctionReference, GenericActionCtx, GenericDataModel, GenericMutationCtx, GenericQueryCtx } from "convex/server";
+ import type { Jwk } from "better-auth/plugins/jwt";
+-export type CreateAuth<DataModel extends GenericDataModel, A extends ReturnType<typeof betterAuth> = Auth> = (ctx: GenericCtx<DataModel>) => A;
++export type CreateAuth<DataModel extends GenericDataModel, A extends ReturnType<typeof betterAuth> = any> = (ctx: GenericCtx<DataModel>) => A;
+ export type EventFunction<T extends DefaultFunctionArgs> = FunctionReference<"mutation", "internal" | "public", T>;
+ export type GenericCtx<DataModel extends GenericDataModel = GenericDataModel> = GenericQueryCtx<DataModel> | GenericMutationCtx<DataModel> | GenericActionCtx<DataModel>;
+ export type RunMutationCtx<DataModel extends GenericDataModel> = (GenericMutationCtx<DataModel> | GenericActionCtx<DataModel>) & {
