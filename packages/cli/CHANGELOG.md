@@ -1,5 +1,11 @@
 # beakcrypt
 
+## 0.0.4
+
+### Patch Changes
+
+- 51c8858: update deps
+
 ## 0.0.3
 
 ### Patch Changes
