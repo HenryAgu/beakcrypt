@@ -166,15 +166,6 @@ importers:
 
   packages/cli:
     dependencies:
-      '@beakcrypt/convex':
-        specifier: workspace:*
-        version: link:../convex
-      '@beakcrypt/crypto':
-        specifier: workspace:*
-        version: link:../crypto
-      '@beakcrypt/shared':
-        specifier: workspace:*
-        version: link:../shared
       commander:
         specifier: ^13.1.0
         version: 13.1.0
@@ -197,9 +188,18 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
     devDependencies:
+      '@beakcrypt/convex':
+        specifier: workspace:*
+        version: link:../convex
+      '@beakcrypt/crypto':
+        specifier: workspace:*
+        version: link:../crypto
       '@beakcrypt/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@beakcrypt/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@beakcrypt/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
