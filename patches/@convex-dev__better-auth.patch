@@ -10,6 +10,19 @@ index 204ffeec3e07fbdb8af07f0a34c0b60893d357fb..ca96f806aadecc737dc1af8908a4de55
  import { omit } from "convex-helpers";
  export const JWT_COOKIE_NAME = "convex_jwt";
  const getJwksAlg = (authProvider) => {
+diff --git a/dist/plugins/cross-domain/index.js b/dist/plugins/cross-domain/index.js
+index 9ab497d58da89e18cff2eb82c553a5533958d53f..454f02143a7f81ba8dc6b0a7d6337881b64fd174 100644
+--- a/dist/plugins/cross-domain/index.js
++++ b/dist/plugins/cross-domain/index.js
+@@ -1,6 +1,7 @@
+ import { setSessionCookie } from "better-auth/cookies";
+ import { generateRandomString } from "better-auth/crypto";
+-import { createAuthEndpoint, createAuthMiddleware, oneTimeToken as oneTimeTokenPlugin, } from "better-auth/plugins";
++import { createAuthEndpoint, createAuthMiddleware } from "better-auth/api";
++import { oneTimeToken as oneTimeTokenPlugin, } from "better-auth/plugins";
+ import { z } from "zod";
+ export const crossDomain = ({ siteUrl }) => {
+     const oneTimeToken = oneTimeTokenPlugin();
 diff --git a/dist/utils/index.d.ts b/dist/utils/index.d.ts
 index c9dd3dded66dd1a915c01bf98cc52e03aedc6850..75469dcf392b1324e8ee5d5cbea50d5d1533a933 100644
 --- a/dist/utils/index.d.ts

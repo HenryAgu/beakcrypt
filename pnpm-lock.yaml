@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@convex-dev/better-auth':
-    hash: a751f15dffad69ce2270c0ad7fbe4a371642ad7ba557401d2bc6e1dafbbe0552
+    hash: a64eaf7d3cd2dd504b367fabed77060563e02d8644609decb5039dc1934cd51e
     path: patches/@convex-dev__better-auth.patch
 
 importers:
@@ -109,7 +109,7 @@ importers:
         version: link:../../packages/ui
       '@convex-dev/better-auth':
         specifier: ^0.10.13
-        version: 0.10.13(patch_hash=a751f15dffad69ce2270c0ad7fbe4a371642ad7ba557401d2bc6e1dafbbe0552)(bcb19e6b782d338c7d36a5c9e88b10cd)
+        version: 0.10.13(patch_hash=a64eaf7d3cd2dd504b367fabed77060563e02d8644609decb5039dc1934cd51e)(bcb19e6b782d338c7d36a5c9e88b10cd)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.10
         version: 0.13.10(typescript@5.9.3)(valibot@1.2.0(typescript@5.9.3))(zod@4.3.6)
@@ -237,7 +237,7 @@ importers:
         version: link:../transactional
       '@convex-dev/better-auth':
         specifier: ^0.10.13
-        version: 0.10.13(patch_hash=a751f15dffad69ce2270c0ad7fbe4a371642ad7ba557401d2bc6e1dafbbe0552)(bcb19e6b782d338c7d36a5c9e88b10cd)
+        version: 0.10.13(patch_hash=a64eaf7d3cd2dd504b367fabed77060563e02d8644609decb5039dc1934cd51e)(bcb19e6b782d338c7d36a5c9e88b10cd)
       '@convex-dev/migrations':
         specifier: ^0.3.1
         version: 0.3.1(convex@1.32.0(react@19.2.4))
@@ -7362,7 +7362,7 @@ snapshots:
 
   '@chevrotain/utils@10.5.0': {}
 
-  '@convex-dev/better-auth@0.10.13(patch_hash=a751f15dffad69ce2270c0ad7fbe4a371642ad7ba557401d2bc6e1dafbbe0552)(bcb19e6b782d338c7d36a5c9e88b10cd)':
+  '@convex-dev/better-auth@0.10.13(patch_hash=a64eaf7d3cd2dd504b367fabed77060563e02d8644609decb5039dc1934cd51e)(bcb19e6b782d338c7d36a5c9e88b10cd)':
     dependencies:
       '@better-auth/passkey': 1.4.9(@better-auth/core@1.5.0(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.1.3)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-auth@1.5.0(@prisma/client@7.4.2(prisma@7.4.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3))(typescript@5.9.3))(drizzle-orm@0.45.1(@electric-sql/pglite@0.3.15)(@prisma/client@7.4.2(prisma@7.4.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3))(typescript@5.9.3))(kysely@0.28.11)(mysql2@3.15.3)(postgres@3.4.7)(prisma@7.4.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)))(mongodb@7.1.0)(mysql2@3.15.3)(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(prisma@7.4.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(better-call@1.3.2(zod@4.3.6))(nanostores@1.1.1)
       '@better-fetch/fetch': 1.1.21
