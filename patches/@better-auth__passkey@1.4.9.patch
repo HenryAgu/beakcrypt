@@ -1,0 +1,11 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 64dffc1a6021227aac0d527bae138f13abaec1e3..543fef3471fd622d95ca63e2f79c54087748208c 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1,5 +1,5 @@
+ import { mergeSchema } from "better-auth/db";
+-import { defineErrorCodes } from "@better-auth/core/utils";
++import { defineErrorCodes } from "@better-auth/core/utils/error-codes";
+ import { createAuthEndpoint } from "@better-auth/core/api";
+ import { base64 } from "@better-auth/utils/base64";
+ import { generateAuthenticationOptions, generateRegistrationOptions, verifyAuthenticationResponse, verifyRegistrationResponse } from "@simplewebauthn/server";
