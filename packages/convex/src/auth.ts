@@ -6,7 +6,6 @@ import { components, internal } from "./_generated/api";
 import { convex } from "@convex-dev/better-auth/plugins";
 import { requireActionCtx } from "@convex-dev/better-auth/utils";
 import { createClient, type GenericCtx } from "@convex-dev/better-auth";
-import { dash } from "@better-auth/infra";
 
 export const authComponent = createClient<DataModel>(components.betterAuth);
 
@@ -30,7 +29,7 @@ export const createAuth = (ctx: GenericCtx<DataModel>) => {
         clientSecret: process.env.GITHUB_CLIENT_SECRET!,
       },
     },
-    plugins: [convex({ authConfig }), dash()],
+    plugins: [convex({ authConfig })],
     databaseHooks: {
       user: {
         create: {

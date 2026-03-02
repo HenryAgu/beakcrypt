@@ -36,12 +36,12 @@ assignees: ""
 
 ## 🖥️ Environment
 
-| Field | Value |
-|-------|-------|
-| OS | e.g. macOS 14, Ubuntu 22.04 |
-| Node.js version | e.g. v20.11.0 |
-| pnpm version | e.g. 8.15.0 |
-| Affected app/package | e.g. `cli`, `web` |
+| Field                | Value                       |
+| -------------------- | --------------------------- |
+| OS                   | e.g. macOS 14, Ubuntu 22.04 |
+| Node.js version      | e.g. v20.11.0               |
+| pnpm version         | e.g. 8.15.0                 |
+| Affected app/package | e.g. `cli`, `web`           |
 
 ---
 

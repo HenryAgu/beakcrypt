@@ -26,7 +26,6 @@
   "dependencies": {
     "@beakcrypt/shared": "workspace:*",
     "@beakcrypt/transactional": "workspace:*",
-    "@better-auth/infra": "^0.1.8",
     "@convex-dev/better-auth": "^0.10.13",
     "@convex-dev/migrations": "^0.3.1",
     "@react-email/components": "^1.0.8",

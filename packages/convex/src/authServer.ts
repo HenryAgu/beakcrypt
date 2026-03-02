@@ -9,6 +9,6 @@ export const {
   preloadAuthQuery,
   fetchAuthMutation,
 } = convexBetterAuthNextJs({
-  convexUrl: process.env.CONVEX_URL!, 
+  convexUrl: process.env.CONVEX_URL!,
   convexSiteUrl: process.env.CONVEX_SITE_URL!,
 });
