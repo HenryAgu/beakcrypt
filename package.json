@@ -5,7 +5,6 @@
     "lint": "turbo run lint",
     "build": "turbo run build",
     "dev": "turbo dev --ui tui",
-    "dev:convex": "turbo dev --filter=@beakcrypt/convex",
     "typecheck": "turbo run typecheck",
     "dev:docs": "turbo dev --filter=@beakcrypt/docs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

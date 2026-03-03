@@ -1,11 +1,12 @@
-"use client"
-import { useState, useCallback } from "react";
+"use client";
+import { useState, useCallback, useRef } from "react";
 
 export function useCopyToClipboard({ timeout = 2000 } = {}) {
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const copy = useCallback(
-    async (text:string) => {
+    async (text: string) => {
       if (!navigator?.clipboard) {
         console.warn("Clipboard API not available");
         return false;
@@ -13,7 +14,12 @@ export function useCopyToClipboard({ timeout = 2000 } = {}) {
       try {
         await navigator.clipboard.writeText(text);
         setCopied(true);
-        setTimeout(() => setCopied(false), timeout);
+
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => setCopied(false), timeout);
+
         return true;
       } catch (err) {
         console.error("Failed to copy:", err);
@@ -21,7 +27,7 @@ export function useCopyToClipboard({ timeout = 2000 } = {}) {
         return false;
       }
     },
-    [timeout]
+    [timeout],
   );
 
   return { copied, copy };

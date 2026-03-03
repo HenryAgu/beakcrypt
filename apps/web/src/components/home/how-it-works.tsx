@@ -1,13 +1,6 @@
 import Step from "./step";
 
-export type StepsType={
-  step: string;
-  title: string;
-  desc: string;
-  code: string;
-}
-
-const steps:StepsType[] = [
+const steps: { step: string; title: string; desc: string; code: string }[] = [
   {
     step: "1",
     title: "Connect your project",

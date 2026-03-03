@@ -1,15 +1,13 @@
 "use client";
-import React from "react";
-import CheckIcon from "../icons/check";
-import CopyIcon from "../icons/copy";
+
+import { Check, Copy } from "lucide-react";
 import { useCopyToClipboard } from "~/hooks/use-copy-to-clipboard";
-import { StepsType } from "./how-it-works";
 
-type StepPropsType = {
-  item: StepsType;
-};
-
-const Step = ({ item }: StepPropsType) => {
+const Step = ({
+  item,
+}: {
+  item: { step: string; title: string; desc: string; code: string };
+}) => {
   const { copied, copy } = useCopyToClipboard({ timeout: 1000 });
   return (
     <div key={item.step}>
@@ -31,11 +29,7 @@ const Step = ({ item }: StepPropsType) => {
           onClick={() => copy(item.code)}
           className="flex h-8 w-8 items-center justify-center rounded border border-white/5 transition-all hover:border-[#5eead4]/50 text-sm cursor-pointer"
         >
-          {copied ? (
-            <CheckIcon color="#5eead4" />
-          ) : (
-            <CopyIcon color="#5eead4" />
-          )}
+          {copied ? <Check fill="#5eead4" /> : <Copy fill="#5eead4" />}
         </button>
       </div>
     </div>
