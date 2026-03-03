@@ -1,0 +1,70 @@
+{
+  "name": "beakcrypt",
+  "version": "0.0.4",
+  "description": "Secure environment variable management with E2E encryption",
+  "homepage": "https://beakcrypt.com",
+  "type": "module",
+  "bin": {
+    "beakcrypt": "./dist/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "keywords": [
+    "env",
+    "secrets",
+    "encryption",
+    "environment-variables",
+    "secret-management",
+    "e2e-encryption",
+    "dotenv",
+    "cli",
+    "devtools"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "directory": "packages/cli",
+    "url": "https://github.com/prudentbird/beakcrypt.git"
+  },
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsgo --pretty --noEmit",
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "convex": "^1.32.0",
+    "dotenv": "^17.3.1",
+    "open": "^11.0.0",
+    "ora": "^9.3.0",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@beakcrypt/convex": "workspace:*",
+    "@beakcrypt/crypto": "workspace:*",
+    "@beakcrypt/eslint-config": "workspace:*",
+    "@beakcrypt/shared": "workspace:*",
+    "@beakcrypt/typescript-config": "workspace:*",
+    "@types/node": "^25.3.3",
+    "@types/prompts": "^2.4.9",
+    "@typescript/native-preview": "7.0.0-dev.20260301.1",
+    "eslint": "^10.0.2",
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1"
+  }
+}
