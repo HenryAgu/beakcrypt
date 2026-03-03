@@ -27,9 +27,15 @@ const Step = ({
         <button
           type="button"
           onClick={() => copy(item.code)}
+          aria-label={copied ? "Copied command" : "Copy command"}
+          title={copied ? "Copied" : "Copy command"}
           className="flex h-8 w-8 items-center justify-center rounded border border-white/5 transition-all hover:border-[#5eead4]/50 text-sm cursor-pointer"
         >
-          {copied ? <Check fill="#5eead4" /> : <Copy fill="#5eead4" />}
+          {copied ? (
+            <Check aria-hidden="true" fill="#5eead4" />
+          ) : (
+            <Copy aria-hidden="true" fill="#5eead4" />
+          )}
         </button>
       </div>
     </div>
